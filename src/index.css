@@ -2,3 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
+.mainDiv {
+  height: 100vh;
+  height: 100dvh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.mainDiv__content {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+}
+
+.mainDiv__input {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 0 10px;
+  background-color: transparent;
+  color: transparent;
+  caret-color: black;
+  z-index: 100;
+
+  &:focus {
+    outline: none;
+    border: 1px solid black;
+  }
+}
+
+.mainDiv__inputPlaceholder {
+  position: absolute;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 11px;
+  transition: all 0.2s ease-in-out;
+  z-index: -100;
+  overflow: hidden;
+}
+
+.mainDiv__tooltip {
+  inset: unset;
+  position: absolute;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  background-color: white;
+  width: 130px;
+  top: 30px;
+  padding: 10px;
+}
+
+.mainDiv__invisible {
+  width: fit-content;
+  visibility: hidden;
+  height: 20px;
+}
